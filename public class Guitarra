@@ -1,0 +1,71 @@
+public class Guitarra {
+
+    private String marca;
+    private String modelo;
+    private int numeroDeCordas;
+    private boolean eletrica;
+
+    public Guitarra(String marca, String modelo, int numeroDeCordas, boolean eletrica) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.numeroDeCordas = numeroDeCordas;
+        this.eletrica = eletrica;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getNumeroDeCordas() {
+        return numeroDeCordas;
+    }
+
+    public void setNumeroDeCordas(int numeroDeCordas) {
+        this.numeroDeCordas = numeroDeCordas;
+    }
+
+    public boolean isEletrica() {
+        return eletrica;
+    }
+
+    public void setEletrica(boolean eletrica) {
+        this.eletrica = eletrica;
+    }
+
+    public void afinar() {
+        System.out.println("A guitarra " + marca + " " + modelo + " está a ser afinada.");
+    }
+
+    public void tocar(String nota) {
+        System.out.println("A guitarra " + marca + " " + modelo + " está a tocar a nota: " + nota);
+    }
+
+    @Override
+    public String toString() {
+        return "Guitarra{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", numeroDeCordas=" + numeroDeCordas +
+                ", eletrica=" + eletrica +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        Guitarra minhaGuitarra = new Guitarra("Fender", "Stratocaster", 6, true);
+        System.out.println(minhaGuitarra);
+        minhaGuitarra.afinar();
+        minhaGuitarra.tocar("Mi");
+    }
+}
